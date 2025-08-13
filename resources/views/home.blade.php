@@ -203,10 +203,10 @@
                         <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
                     @auth
                         <li class="nav-item">
@@ -400,17 +400,23 @@
                         Start building something amazing today!
                     </p>
                     @auth
-                        <a href="{{ route('dashboard') }}" class="btn btn-light btn-lg px-5 py-3">
+                        <a href="{{ route('dashboard') }}" class="btn btn-light btn-lg px-5 py-3 me-3">
                             <i class="fas fa-arrow-right me-2"></i>Go to Dashboard
                         </a>
                     @else
                         <a href="{{ route('register') }}" class="btn btn-light btn-lg px-5 py-3 me-3">
                             <i class="fas fa-user-plus me-2"></i>Create Account
                         </a>
-                        <a href="{{ route('login') }}" class="btn btn-outline-light btn-lg px-5 py-3">
+                        <a href="{{ route('login') }}" class="btn btn-outline-light btn-lg px-5 py-3 me-3">
                             <i class="fas fa-sign-in-alt me-2"></i>Sign In
                         </a>
                     @endauth
+                    <a href="{{ route('about') }}" class="btn btn-outline-light btn-lg px-5 py-3 me-3">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
+                    <a href="{{ route('contact') }}" class="btn btn-outline-light btn-lg px-5 py-3">
+                        <i class="fas fa-envelope me-2"></i>Contact Us
+                    </a>
                 </div>
             </div>
         </div>
